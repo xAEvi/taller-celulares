@@ -29,9 +29,15 @@ const App = () => {
             />
           }
         />
-        <Route path="/peticiones" element={<Peticiones />} />
+        <Route
+          path="/peticiones"
+          element={<Peticiones isLoggedIn={isLoggedIn} isAdmin={isAdmin} />}
+        />
         <Route path="/reparaciones" element={<Reparaciones />} />
-        <Route path="/administracion" element={<Administracion />} />
+        <Route
+          path="/administracion"
+          element={<Administracion isAdmin={isAdmin} />}
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/perfil" element={<Perfil />} />
