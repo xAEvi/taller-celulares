@@ -24,6 +24,8 @@ const App = () => {
     localStorage.getItem("userName") || ""
   );
 
+  const [modalOpen, setModalOpen] = useState(false);
+
   useEffect(() => {
     localStorage.setItem("isLoggedIn", isLoggedIn);
     localStorage.setItem("isAdmin", isAdmin);
@@ -45,6 +47,10 @@ const App = () => {
     localStorage.removeItem("userName");
   };
 
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
+
   return (
     <Router>
       <NavbarComponent
@@ -52,6 +58,7 @@ const App = () => {
         isAdmin={isAdmin}
         handleLogout={handleLogout}
         handleLogin={handleLogin}
+        toggleModal={toggleModal}
       />
       <Routes>
         <Route
@@ -77,7 +84,10 @@ const App = () => {
           element={<Administracion isAdmin={isAdmin} />}
         />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route
+          path="/register"
+          element={<Register isOpen={modalOpen} toggleModal={toggleModal} />}
+        />
         <Route path="/perfil" element={<Perfil isLoggedIn={isLoggedIn} />} />
         <Route path="/repuestos" element={<Respuestos isAdmin={isAdmin} />} />
         <Route path="/tecnicos" element={<Tecnicos isAdmin={isAdmin} />} />

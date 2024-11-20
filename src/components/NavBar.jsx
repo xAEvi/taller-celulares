@@ -13,6 +13,7 @@ const NavbarComponent = ({
   isAdmin,
   handleLogin,
   handleLogout,
+  toggleModal,
 }) => {
   return (
     <Navbar color="light" light expand="md" className="px-4">
@@ -55,7 +56,8 @@ const NavbarComponent = ({
             </NavItem>
             <NavItem>
               <NavLink
-                href="/register"
+                href="#"
+                onClick={toggleModal}
                 className="bg-success text-white px-4 py-2 rounded"
               >
                 Crear Cuenta
