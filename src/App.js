@@ -9,10 +9,13 @@ import Administracion from "./components/pages/Administracion";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
 import Perfil from "./components/pages/Perfil";
+import Respuestos from "./components/pages/Respuestos";
+import Tecnicos from "./components/pages/Tecnicos";
+import Equipos from "./components/pages/Equipos";
 
 const App = () => {
   const isLoggedIn = true;
-  const isAdmin = true;
+  const isAdmin = false;
   const userName = "Pepito";
 
   return (
@@ -33,7 +36,10 @@ const App = () => {
           path="/peticiones"
           element={<Peticiones isLoggedIn={isLoggedIn} isAdmin={isAdmin} />}
         />
-        <Route path="/reparaciones" element={<Reparaciones />} />
+        <Route
+          path="/reparaciones"
+          element={<Reparaciones isLoggedIn={isLoggedIn} isAdmin={isAdmin} />}
+        />
         <Route
           path="/administracion"
           element={<Administracion isAdmin={isAdmin} />}
@@ -41,6 +47,9 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/perfil" element={<Perfil />} />
+        <Route path="/repuestos" element={<Respuestos isAdmin={isAdmin} />} />
+        <Route path="/tecnicos" element={<Tecnicos isAdmin={isAdmin} />} />
+        <Route path="/equipos" element={<Equipos isAdmin={isAdmin} />} />
       </Routes>
     </Router>
   );

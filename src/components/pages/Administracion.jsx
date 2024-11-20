@@ -22,17 +22,17 @@ const Administracion = ({ isAdmin }) => {
 
         {/* Columna derecha con los botones */}
         <Col md={6} className="d-flex flex-column align-items-end">
-          <Link to="/gestionar-repuestos">
+          <Link to="/repuestos">
             <Button color="primary" className="mb-3">
               Gestionar Repuestos
             </Button>
           </Link>
-          <Link to="/gestionar-tecnicos">
+          <Link to="/tecnicos">
             <Button color="primary" className="mb-3">
               Gestionar Técnicos
             </Button>
           </Link>
-          <Link to="/gestionar-equipos">
+          <Link to="/equipos">
             <Button color="primary">Gestionar Equipos</Button>
           </Link>
         </Col>
