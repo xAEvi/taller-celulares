@@ -35,7 +35,12 @@ const NavbarComponent = ({ isLoggedIn, isAdmin }) => {
               <NavLink href="/perfil">Perfil</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/logout">Cerrar Sesión</NavLink>
+              <NavLink
+                href="/logout"
+                className="bg-danger text-white px-4 py-2 rounded"
+              >
+                Cerrar Sesión
+              </NavLink>
             </NavItem>
           </>
         ) : (
@@ -44,7 +49,12 @@ const NavbarComponent = ({ isLoggedIn, isAdmin }) => {
               <NavLink href="/login">Iniciar Sesión</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/register">Crear Cuenta</NavLink>
+              <NavLink
+                href="/register"
+                className="bg-success text-white px-4 py-2 rounded"
+              >
+                Crear Cuenta
+              </NavLink>
             </NavItem>
           </>
         )}
