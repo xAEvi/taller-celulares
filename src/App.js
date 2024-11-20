@@ -51,6 +51,10 @@ const App = () => {
     setModalOpen(!modalOpen);
   };
 
+  const modoAdmin = () => {
+    setIsAdmin(!isAdmin);
+  };
+
   return (
     <Router>
       <NavbarComponent
@@ -60,6 +64,10 @@ const App = () => {
         handleLogin={handleLogin}
         toggleModal={toggleModal}
       />
+      {/* Botón Admin Mode */}
+      <button className="btn btn-warning" onClick={modoAdmin}>
+        {isAdmin ? "Admin Mode On" : "Admin Mode Off"}
+      </button>
       <Routes>
         <Route
           path="/"
