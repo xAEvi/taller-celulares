@@ -32,8 +32,8 @@ const App = () => {
 
   const handleLogin = (user) => {
     setIsLoggedIn(true);
-    setIsAdmin(user.isAdmin); // Puedes verificar si el usuario es admin
-    setUserName(user.name); // Usar el nombre del usuario
+    // Verificar si el usuario es admin
+    // Usar el nombre del usuario
   };
 
   const handleLogout = () => {
