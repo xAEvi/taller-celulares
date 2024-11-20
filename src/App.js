@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavbarComponent from "./components/NavBar"; // Importa tu Navbar
-import Home from "./components/pages/Home"; // Componentes para las diferentes páginas
+import NavbarComponent from "./components/NavBar";
+import Home from "./components/pages/Home";
 import Peticiones from "./components/pages/Peticiones";
 import Reparaciones from "./components/pages/Reparaciones";
 import Administracion from "./components/pages/Administracion";
@@ -11,8 +11,8 @@ import Register from "./components/pages/Register";
 import Perfil from "./components/pages/Perfil";
 
 const App = () => {
-  const isLoggedIn = true; // Cambia esto según tu lógica de autenticación
-  const isAdmin = true; // Cambia esto según tu lógica de rol de administrador
+  const isLoggedIn = true;
+  const isAdmin = true;
   const userName = "Pepito";
 
   return (
