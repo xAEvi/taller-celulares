@@ -96,7 +96,10 @@ const App = () => {
           path="/register"
           element={<Register isOpen={modalOpen} toggleModal={toggleModal} />}
         />
-        <Route path="/perfil" element={<Perfil isLoggedIn={isLoggedIn} />} />
+        <Route
+          path="/perfil"
+          element={<Perfil isLoggedIn={isLoggedIn} isAdmin={isAdmin} />}
+        />
         <Route path="/repuestos" element={<Respuestos isAdmin={isAdmin} />} />
         <Route path="/tecnicos" element={<Tecnicos isAdmin={isAdmin} />} />
         <Route path="/equipos" element={<Equipos isAdmin={isAdmin} />} />

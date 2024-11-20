@@ -34,9 +34,11 @@ const NavbarComponent = ({
       <Nav navbar>
         {isLoggedIn ? (
           <>
-            <NavItem>
-              <NavLink href="/perfil">Perfil</NavLink>
-            </NavItem>
+            {!isAdmin && (
+              <NavItem>
+                <NavLink href="/perfil">Perfil</NavLink>
+              </NavItem>
+            )}
             <NavItem>
               <NavLink
                 href="#"

@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import DataTable from "../DataTable";
 
-const Peticiones = ({ isLoggedIn }) => {
+const Peticiones = ({ isLoggedIn, isAdmin }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isLoggedIn) {
+    if (!isLoggedIn || isAdmin) {
       navigate("/");
     }
   }, [isLoggedIn, navigate]);
