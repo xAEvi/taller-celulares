@@ -8,7 +8,12 @@ import {
   NavbarText,
 } from "reactstrap";
 
-const NavbarComponent = ({ isLoggedIn, isAdmin }) => {
+const NavbarComponent = ({
+  isLoggedIn,
+  isAdmin,
+  handleLogin,
+  handleLogout,
+}) => {
   return (
     <Navbar color="light" light expand="md" className="px-4">
       <NavbarBrand href="/">Taller de Celulares</NavbarBrand>
@@ -33,7 +38,8 @@ const NavbarComponent = ({ isLoggedIn, isAdmin }) => {
             </NavItem>
             <NavItem>
               <NavLink
-                href="/logout"
+                href="#"
+                onClick={handleLogout}
                 className="bg-danger text-white px-4 py-2 rounded"
               >
                 Cerrar Sesión
@@ -43,7 +49,9 @@ const NavbarComponent = ({ isLoggedIn, isAdmin }) => {
         ) : (
           <>
             <NavItem>
-              <NavLink href="/login">Iniciar Sesión</NavLink>
+              <NavLink href="#" onClick={handleLogin}>
+                Iniciar Sesión
+              </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
