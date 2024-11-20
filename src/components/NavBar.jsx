@@ -14,9 +14,6 @@ const NavbarComponent = ({ isLoggedIn, isAdmin }) => {
       <NavbarBrand href="/">Taller de Celulares</NavbarBrand>
       <Nav className="me-auto" navbar>
         <NavItem>
-          <NavLink href="/">Inicio</NavLink>
-        </NavItem>
-        <NavItem>
           <NavLink href="/peticiones">Peticiones</NavLink>
         </NavItem>
         <NavItem>
