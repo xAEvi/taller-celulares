@@ -8,12 +8,15 @@ import {
   NavbarText,
 } from "reactstrap";
 
+import Register from "./pages/Register";
+
 const NavbarComponent = ({
   isLoggedIn,
   isAdmin,
   handleLogin,
   handleLogout,
   toggleModal,
+  modalOpen,
 }) => {
   return (
     <Navbar color="light" light expand="md" className="px-4">
@@ -63,6 +66,7 @@ const NavbarComponent = ({
                 className="bg-success text-white px-4 py-2 rounded"
               >
                 Crear Cuenta
+                <Register toggleModal={toggleModal} isOpen={modalOpen} />
               </NavLink>
             </NavItem>
           </>

@@ -63,6 +63,7 @@ const App = () => {
         handleLogout={handleLogout}
         handleLogin={handleLogin}
         toggleModal={toggleModal}
+        modalOpen={modalOpen}
       />
       {/* Botón Admin Mode */}
       <button className="btn btn-warning" onClick={modoAdmin}>
@@ -76,6 +77,8 @@ const App = () => {
               isLoggedIn={isLoggedIn}
               isAdmin={isAdmin}
               userName={userName}
+              toggleModal={toggleModal}
+              modalOpen={modalOpen}
             />
           }
         />
@@ -92,10 +95,6 @@ const App = () => {
           element={<Administracion isAdmin={isAdmin} />}
         />
         <Route path="/login" element={<Login />} />
-        <Route
-          path="/register"
-          element={<Register isOpen={modalOpen} toggleModal={toggleModal} />}
-        />
         <Route
           path="/perfil"
           element={<Perfil isLoggedIn={isLoggedIn} isAdmin={isAdmin} />}

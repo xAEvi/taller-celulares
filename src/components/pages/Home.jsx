@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Button } from "reactstrap";
+import Register from "./Register";
 
-const Home = ({ isLoggedIn, isAdmin, userName }) => {
+const Home = ({ isLoggedIn, isAdmin, userName, modalOpen, toggleModal }) => {
   return (
     <Container className="my-5">
       <Row>
@@ -46,13 +47,14 @@ const Home = ({ isLoggedIn, isAdmin, userName }) => {
             <>
               <h2>Bienvenido</h2>
               <p>Por favor ingresa o crea una cuenta para continuar.</p>
-              <Button color="primary" href="/login" className="mb-3">
+              <Button color="primary" className="mb-3">
                 Iniciar sesión
               </Button>
               <br />
-              <Button color="success" href="/register">
+              <Button color="success" onClick={toggleModal}>
                 Crear cuenta
               </Button>
+              <Register toggleModal={toggleModal} isOpen={modalOpen} />
             </>
           )}
         </Col>
